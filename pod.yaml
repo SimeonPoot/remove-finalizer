@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  finalizers:
+    - "finalizer.extensions/v1beta1"
+  labels:
+    run: nginx
+  name: nginx
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
